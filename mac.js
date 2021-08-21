@@ -51,7 +51,7 @@ function calculateTotal(){
 }
 
 // add promo code 
-document.getElementById('apply').addEventListener('click', function(){
+document.getElementById('apply').addEventListener('click', function(event){
     const promoCodeInput = document.getElementById('promo-code');
     const promoCodeText = promoCodeInput.value;
      const total = document.getElementById('total');
@@ -60,9 +60,11 @@ document.getElementById('apply').addEventListener('click', function(){
         const discount = totalPrice() - Number(totalPrice())*0.2;
         total.innerText = discount;
         promoCodeInput.value = '';
+        event.target.setAttribute('disabled',true)
     }
-    else{
-        console.log('code wrong')
+     else{
+        document.getElementById('error-msg').style.display = 'block';
+        promoCodeInput.value = '';
     }
 })
 
