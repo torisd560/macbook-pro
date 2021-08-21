@@ -80,31 +80,3 @@ document.getElementById('apply').addEventListener('click', function(event){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function totalPrice(){
-//     getPrice('best')
-//     getPrice('total')
-// }
-//      function getPrice(price){
-//         const productPrice =  document.getElementById( price +'-price');
-//         const updateProductPrice = productPrice.innerText;
-//         productPrice.innerText = Number(updateProductPrice) + (updateProductCost());
-//      }    
-
-
-
-
