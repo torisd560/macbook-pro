@@ -48,8 +48,23 @@ function totalPrice(){
 function calculateTotal(){
     const total = document.getElementById('total');
     total.innerText = totalPrice()
-    console.log(total.innerText)
 }
+
+// add promo code 
+document.getElementById('apply').addEventListener('click', function(){
+    const promoCodeInput = document.getElementById('promo-code');
+    const promoCodeText = promoCodeInput.value;
+     const total = document.getElementById('total');
+     total.innerText = totalPrice()
+    if ( promoCodeText=='stevekaku'){
+        const discount = totalPrice() - Number(totalPrice())*0.2;
+        total.innerText = discount;
+        promoCodeInput.value = '';
+    }
+    else{
+        console.log('code wrong')
+    }
+})
 
 
 
