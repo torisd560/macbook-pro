@@ -1,11 +1,11 @@
-// memory cost
+// memory cost button
 document.getElementById('memory-8GB').addEventListener('click', function(){
     updateProductCost('memory', 0)
 });
 document.getElementById('memory-16GB').addEventListener('click',function(){
     updateProductCost('memory', 180)
 });
-// storage cost
+// storage cost button
 document.getElementById('storage-256').addEventListener('click',function(){
     updateProductCost('storage', 0)
 });
@@ -15,7 +15,7 @@ document.getElementById('storage-512').addEventListener('click',function(){
 document.getElementById('storage-1TB').addEventListener('click',function(){
     updateProductCost('storage', 180)
 });
-// delivery charge cost
+// delivery charge cost button
 document.getElementById('free-delivery').addEventListener('click',function(){
     updateProductCost('delivery', 0)
 });
