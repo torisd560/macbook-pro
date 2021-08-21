@@ -64,6 +64,7 @@ document.getElementById('apply').addEventListener('click', function(event){
     }
      else{
         document.getElementById('error-msg').style.display = 'block';
+        event.target.setAttribute('disabled',true)
         promoCodeInput.value = '';
     }
 })
