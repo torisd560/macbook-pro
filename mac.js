@@ -26,20 +26,29 @@ document.getElementById('charged-delivery').addEventListener('click',function(){
 // update product cost use function
 function updateProductCost(product ,cost){
     const previousProductCost= document.getElementById( product + '-cost');
-    previousProductCost.innerText = cost;
-
-    // const memoryCost = document.getElementById('memory-cost').innerText ;
-    // const storagCost = document.getElementById('storage-cost').innerText;
-    // const deliveryCost = document.getElementById('delivery-cost').innerText;
-    const bestPrice = document.getElementById('best-price').innerText;
-    const totalPrice = document.getElementById('total-price');
-    totalPrice.innerText = Number(bestPrice) + getCost('memory') +  getCost('storage') +  getCost('delivery');
+    previousProductCost.innerText = cost; 
+    totalPrice()
+    calculateTotal()
 }
 // get product cost
 function getCost(type){
     const typeCost = document.getElementById( type +'-cost') ;
     const typeCostText = Number(typeCost.innerText);
     return typeCostText ;
+}
+// calculate total price
+function totalPrice(){
+    const bestPrice = document.getElementById('best-price').innerText;
+    const totalPrice = document.getElementById('total-price');
+    const totalPriceText = Number(totalPrice.innerText);
+    totalPrice.innerText = Number(bestPrice) + getCost('memory') +  getCost('storage') +  getCost('delivery');
+    return totalPriceText;
+}
+// calculate Total 
+function calculateTotal(){
+    const total = document.getElementById('total');
+    total.innerText = totalPrice()
+    console.log(total.innerText)
 }
 
 
